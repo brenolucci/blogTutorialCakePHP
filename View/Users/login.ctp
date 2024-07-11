@@ -1,4 +1,6 @@
+<p><?php echo $this->Html->link('Home Public Page', array('controller' => 'posts', 'action', 'index')); ?></p>
 <div class="users form">
+
     <?php echo $this->Flash->render('auth'); ?>
     <?php echo $this->Form->create('User'); ?>
     <fieldset>

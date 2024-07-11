@@ -11,6 +11,13 @@ class PostsController extends AppController
     {
         $this->set('posts', $this->Post->find('all'));
     }
+    public function myposts()
+    {
+        $conditions = ['Post.user_id' => $this->Auth->user()['id']];
+        $this->set('posts', $this->Post->find('all', [
+            'conditions' => $conditions
+        ]));
+    }
 
     public function view($id = null)
     {

@@ -1,567 +1,240 @@
-2024-07-10 18:36:23 Error: [Error] Call to a member function useTag() on null
-Request URL: /cakeblog/posts
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php(1482): FormHelper->label('ds_nome', 'T\xC3\xADtulo', Array)
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php(1341): FormHelper->_inputLabel('ds_nome', 'T\xC3\xADtulo', Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php(1067): FormHelper->_getLabel('ds_nome', Array)
-#3 C:\wamp64\www\cakeblog\View\Helper\FormxHelper.php(15): FormHelper->input('ds_nome', Array)
-#4 C:\wamp64\www\cakeblog\View\Posts\index.ctp(19): FormxHelper->inputNumber('ds_nome', Array)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#6 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#7 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#9 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#10 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#11 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#12 {main}
-2024-07-10 18:36:23 Error: Fatal Error (1): Uncaught Error: Call to a member function useTag() on null in C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php:1784
-Stack trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php(438): FormHelper->hidden('_method', Array)
-#1 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\HtmlToolbarHelper.php(227): FormHelper->create('log', Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Core\CakeObject.php(124): HtmlToolbarHelper->explainLink('SELECT `Post`.`...', 'default')
-#3 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(108): CakeObject->dispatchMethod('explainLink', Array)
-#4 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(196): ToolbarHelper->__call('explainLink', Array)
-#5 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Elements\sql_log_panel.ctp(32): ToolbarHelper->getQueryLogs('default', Array)
-#6 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#7 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#8 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(1224): View->_render('C:\\wamp64\\www\\c...', Array)
-#9 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(418): View->_renderElement('C:\\wamp64\\www\\c...', Array, Array)
-#10 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Elements\debug_toolbar.ctp(44): View->element('DebugKit.sql_lo...', Array, Array)
-#11 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#12 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#13 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(1224): View->_render('C:\\wamp64\\www\\c...', Array)
-#14 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(418): View->_renderElement('C:\\wamp64\\www\\c...', Array, Array)
-#15 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\HtmlToolbarHelper.php(196): View->element('DebugKit.debug_...', Array, Array)
-#16 C:\wamp64\www\cake2-php8\lib\Cake\Core\CakeObject.php(120): HtmlToolbarHelper->send()
-#17 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(108): CakeObject->dispatchMethod('send', Array)
-#18 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(83): ToolbarHelper->__call('send', Array)
-#19 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): ToolbarHelper->afterLayout('C:\\wamp64\\www\\c...')
-#20 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(200): ObjectCollection->trigger('afterLayout', Array, Array)
-#21 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): HelperCollection->trigger(Object(CakeEvent))
-#22 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(548): CakeEventManager->dispatch(Object(CakeEvent))
-#23 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(481): View->renderLayout('<h2>Call to a m...', 'default')
-#24 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render('error500', 'default')
-#25 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
-#26 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
-#27 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
-#28 C:\wamp64\www\cake2-php8\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
-#29 [internal function]: ErrorHandler::handleException(Object(Error))
-#30 {main}
-  thrown in [C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php, line 1784]
-2024-07-10 18:36:23 Error: [FatalErrorException] Uncaught Error: Call to a member function useTag() on null in C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php:1784
-Stack trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\FormHelper.php(438): FormHelper->hidden('_method', Array)
-#1 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\HtmlToolbarHelper.php(227): FormHelper->create('log', Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Core\CakeObject.php(124): HtmlToolbarHelper->explainLink('SELECT `Post`.`...', 'default')
-#3 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(108): CakeObject->dispatchMethod('explainLink', Array)
-#4 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(196): ToolbarHelper->__call('explainLink', Array)
-#5 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Elements\sql_log_panel.ctp(32): ToolbarHelper->getQueryLogs('default', Array)
-#6 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#7 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#8 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(1224): View->_render('C:\\wamp64\\www\\c...', Array)
-#9 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(418): View->_renderElement('C:\\wamp64\\www\\c...', Array, Array)
-#10 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Elements\debug_toolbar.ctp(44): View->element('DebugKit.sql_lo...', Array, Array)
-#11 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#12 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#13 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(1224): View->_render('C:\\wamp64\\www\\c...', Array)
-#14 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(418): View->_renderElement('C:\\wamp64\\www\\c...', Array, Array)
-#15 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\HtmlToolbarHelper.php(196): View->element('DebugKit.debug_...', Array, Array)
-#16 C:\wamp64\www\cake2-php8\lib\Cake\Core\CakeObject.php(120): HtmlToolbarHelper->send()
-#17 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(108): CakeObject->dispatchMethod('send', Array)
-#18 C:\wamp64\www\cakeblog\Plugin\DebugKit\View\Helper\ToolbarHelper.php(83): ToolbarHelper->__call('send', Array)
-#19 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): ToolbarHelper->afterLayout('C:\\wamp64\\www\\c...')
-#20 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(200): ObjectCollection->trigger('afterLayout', Array, Array)
-#21 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): HelperCollection->trigger(Object(CakeEvent))
-#22 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(548): CakeEventManager->dispatch(Object(CakeEvent))
-#23 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(481): View->renderLayout('<h2>Call to a m...', 'default')
-#24 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render('error500', 'default')
-#25 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
-#26 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
-#27 C:\wamp64\www\cake2-php8\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
-#28 C:\wamp64\www\cake2-php8\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
-#29 [internal function]: ErrorHandler::handleException(Object(Error))
-#30 {main}
-  thrown
-Request URL: /cakeblog/posts
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Error\ErrorHandler.php(214): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\wamp64\\www\\c...', 1784)
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\wamp64\\www\\c...', 1784, Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Core\App.php(943): App::_checkFatalError()
-#3 [internal function]: App::shutdown()
-#4 {main}
-2024-07-10 18:39:54 Error: [TypeError] Unsupported operand types: string + array
-Request URL: /cakeblog/posts
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\View\Posts\index.ctp(24): CakeText::truncate('2024-07-10 09:3...', 10, '***')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-10 18:40:03 Error: [TypeError] Unsupported operand types: string + array
-Request URL: /cakeblog/posts
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\View\Posts\index.ctp(24): CakeText::truncate('This is really ...', 10, '***')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-10 19:03:23 Error: [MissingActionException] Action PostsController::view() could not be found.
+2024-07-11 14:47:36 Error: [MissingControllerException] Controller class CakeblogController could not be found.
 Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
+  'class' => 'CakeblogController',
+  'plugin' => NULL,
 )
-Request URL: /cakeblog/posts/view/1
+Request URL: /cakeblog/cakeblog/
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 19:06:39 Error: [MissingActionException] Action PostsController::view() could not be found.
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 14:47:38 Error: [MissingControllerException] Controller class CakeblogController could not be found.
 Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
+  'class' => 'CakeblogController',
+  'plugin' => NULL,
 )
-Request URL: /cakeblog/posts/view/2
+Request URL: /cakeblog/cakeblog/
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 19:10:12 Error: [MissingActionException] Action PostsController::view() could not be found.
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 14:49:20 Error: [MissingControllerException] Controller class AddController could not be found.
 Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
+  'class' => 'AddController',
+  'plugin' => NULL,
 )
-Request URL: /cakeblog/posts/view/1
+Request URL: /cakeblog/add
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 19:15:30 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 14:53:11 Error: [Error] Call to undefined method PostsController::Auth()
+Request URL: /cakeblog/
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:15:39 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:16:07 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:18:11 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:23:35 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:23:51 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:24:11 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:24:18 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/5
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:24:24 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:24:39 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
-)
-Request URL: /cakeblog/posts/view/5
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 19:39:56 Error: [MissingActionException] Action PostsController::view() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'view',
-)
-Request URL: /cakeblog/posts/view/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 19:40:20 Error: [MissingViewException] View file "Posts\lol.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Posts\\lol.ctp',
-)
-Request URL: /cakeblog/posts/lol/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\lol')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-10 20:48:24 Error: [MissingActionException] Action PostsController::delete() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'delete',
-)
-Request URL: /cakeblog/posts/delete/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 20:48:53 Error: [MissingActionException] Action PostsController::delete() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'delete',
-)
-Request URL: /cakeblog/posts/delete/1
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-10 20:51:35 Error: [MethodNotAllowedException] Method Not Allowed
-Request URL: /cakeblog/posts/delete/1
-Stack Trace:
-#0 [internal function]: PostsController->delete('1')
+#0 [internal function]: PostsController->index()
 #1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
 #2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2024-07-11 10:58:43 Error: [MissingActionException] Action PostsController::display() could not be found.
+2024-07-11 16:58:35 Error: [MissingControllerException] Controller class ViewController could not be found.
 Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'display',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 10:58:44 Error: [MissingActionException] Action PostsController::display() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'display',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 10:58:49 Error: [MissingActionException] Action PostsController::display() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'display',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 10:59:00 Error: [MissingActionException] Action PostsController::display() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'display',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 12:35:12 Error: [MissingControllerException] Controller class UsersController could not be found.
-Exception Attributes: array (
-  'class' => 'UsersController',
+  'class' => 'ViewController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/users/add
+Request URL: /cakeblog/view/
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 12:36:00 Error: [MissingControllerException] Controller class UsersController could not be found.
-Exception Attributes: array (
-  'class' => 'UsersController',
-  'plugin' => NULL,
-)
-Request URL: /cakeblog/users/add
+2024-07-11 16:59:07 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
 Stack Trace:
-#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2024-07-11 12:36:02 Error: [MissingControllerException] Controller class UsersController could not be found.
-Exception Attributes: array (
-  'class' => 'UsersController',
-  'plugin' => NULL,
-)
-Request URL: /cakeblog/users/add
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2024-07-11 12:36:11 Error: [MissingControllerException] Controller class UsersController could not be found.
-Exception Attributes: array (
-  'class' => 'UsersController',
-  'plugin' => NULL,
-)
-Request URL: /cakeblog/users/add
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2024-07-11 12:36:34 Error: [Error] Call to a member function allow() on null
-Request URL: /cakeblog/users/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): UsersController->beforeFilter(Object(CakeEvent))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(687): CakeEventManager->dispatch(Object(CakeEvent))
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-11 12:37:56 Error: [Error] Call to a member function allow() on null
-Request URL: /cakeblog/users/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): UsersController->beforeFilter(Object(CakeEvent))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(687): CakeEventManager->dispatch(Object(CakeEvent))
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-11 12:46:38 Error: [MissingViewException] View file "Users\index.ctp" is missing.
-Exception Attributes: array (
-  'file' => 'Users\\index.ctp',
-)
-Request URL: /cakeblog/users
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Users\\index')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2024-07-11 12:47:50 Error: [MissingControllerException] Controller class AddController could not be found.
-Exception Attributes: array (
-  'class' => 'AddController',
-  'plugin' => NULL,
-)
-Request URL: /cakeblog/add
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2024-07-11 12:53:39 Error: [MissingControllerException] Controller class AddController could not be found.
-Exception Attributes: array (
-  'class' => 'AddController',
-  'plugin' => NULL,
-)
-Request URL: /cakeblog/add
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2024-07-11 12:54:32 Error: [NotFoundException] Invalid user
-Request URL: /cakeblog/users/view/admin
-Stack Trace:
-#0 [internal function]: UsersController->view('admin')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
 #2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2024-07-11 12:59:36 Error: [MethodNotAllowedException] Method Not Allowed
-Request URL: /cakeblog/users/delete/3
+2024-07-11 17:02:08 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
 Stack Trace:
-#0 C:\wamp64\www\cakeblog\Controller\UsersController.php(64): CakeRequest->allowMethod(Array)
-#1 [internal function]: UsersController->delete('3')
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#5 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2024-07-11 12:59:46 Error: [MethodNotAllowedException] Method Not Allowed
-Request URL: /cakeblog/users/delete/3
-Stack Trace:
-#0 C:\wamp64\www\cakeblog\Controller\UsersController.php(64): CakeRequest->allowMethod(Array)
-#1 [internal function]: UsersController->delete('3')
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#5 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2024-07-11 13:29:31 Error: [MissingViewException] View file "Users\edit.ctp" is missing.
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 17:17:15 Error: [MissingViewException] View file "Posts\user_index.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Users\\edit.ctp',
+  'file' => 'Posts\\user_index.ctp',
 )
-Request URL: /cakeblog/users/edit/1
+Request URL: /cakeblog/posts/userIndex
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Users\\edit')
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\user_inde...')
 #1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
 #2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2024-07-11 13:31:43 Error: [MissingHelperException] Helper class UserHelper could not be found.
+2024-07-11 17:17:24 Error: [MissingViewException] View file "Posts\user_index.ctp" is missing.
 Exception Attributes: array (
-  'class' => 'UserHelper',
+  'file' => 'Posts\\user_index.ctp',
+)
+Request URL: /cakeblog/posts/userIndex
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\user_inde...')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 17:18:46 Error: [MissingViewException] View file "Posts\user_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\user_index.ctp',
+)
+Request URL: /cakeblog/posts/userIndex
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\user_inde...')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 17:21:35 Error: [MissingActionException] Action PostsController::userIndex() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'userIndex',
+)
+Request URL: /cakeblog/posts/userIndex
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2024-07-11 17:51:04 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
   'plugin' => '',
 )
-Request URL: /cakeblog/users/edit/1
+Request URL: /cakeblog/posts/index/action/index
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('User')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('User')
-#2 C:\wamp64\www\cakeblog\View\Users\edit.ctp(7): View->__get('User')
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
 #3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
 #4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
 #5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
 #6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
 #7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:31:53 Error: [MissingHelperException] Helper class UserHelper could not be found.
+2024-07-11 17:51:35 Error: [MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
-  'class' => 'UserHelper',
+  'class' => 'AuthHelper',
   'plugin' => '',
 )
-Request URL: /cakeblog/users/edit/1
+Request URL: /cakeblog/posts/index/action/index
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('User')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('User')
-#2 C:\wamp64\www\cakeblog\View\Users\edit.ctp(7): View->__get('User')
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
 #3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
 #4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
 #5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
 #6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
 #7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:34:48 Error: [MissingHelperException] Helper class UserHelper could not be found.
+2024-07-11 17:52:25 Error: [MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
-  'class' => 'UserHelper',
+  'class' => 'AuthHelper',
   'plugin' => '',
 )
-Request URL: /cakeblog/users
+Request URL: /cakeblog/posts/index/action/index
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('User')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('User')
-#2 C:\wamp64\www\cakeblog\View\Users\index.ctp(3): View->__get('User')
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
 #3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
 #4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
 #5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
 #6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
 #7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:34:59 Error: [MissingHelperException] Helper class UserHelper could not be found.
+2024-07-11 17:52:39 Error: [MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
-  'class' => 'UserHelper',
+  'class' => 'AuthHelper',
   'plugin' => '',
 )
-Request URL: /cakeblog/users
+Request URL: /cakeblog/posts/index/action/index
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('User')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('User')
-#2 C:\wamp64\www\cakeblog\View\Users\index.ctp(3): View->__get('User')
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
 #3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
 #4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
 #5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
 #6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
 #7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:42:18 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+2024-07-11 17:52:50 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => '',
+)
+Request URL: /cakeblog/posts/index/action/index
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2024-07-11 17:54:35 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => '',
+)
+Request URL: /cakeblog/posts/index/action/index
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2024-07-11 17:54:56 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => '',
+)
+Request URL: /cakeblog/posts/index/action/index
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2024-07-11 17:57:59 Error: [MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
   'class' => 'AuthHelper',
   'plugin' => '',
@@ -579,7 +252,7 @@ Stack Trace:
 #8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:42:32 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+2024-07-11 17:58:04 Error: [MissingHelperException] Helper class AuthHelper could not be found.
 Exception Attributes: array (
   'class' => 'AuthHelper',
   'plugin' => '',
@@ -588,7 +261,7 @@ Request URL: /cakeblog/
 Stack Trace:
 #0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
 #1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
-#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(4): View->__get('Auth')
+#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
 #3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
 #4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
 #5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
@@ -597,26 +270,84 @@ Stack Trace:
 #8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2024-07-11 13:42:41 Error: [MissingHelperException] Helper class AuthHelper could not be found.
-Exception Attributes: array (
-  'class' => 'AuthHelper',
-  'plugin' => '',
-)
-Request URL: /cakeblog/
+2024-07-11 18:11:45 Error: [ArgumentCountError] Too few arguments to function Router::redirect(), 1 passed in C:\wamp64\www\cakeblog\View\Posts\myposts.ctp on line 2 and at least 2 expected
+Request URL: /cakeblog/posts/myposts/action/index
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
-#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(4): View->__get('Auth')
-#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#10 {main}
-2024-07-11 13:42:51 Error: [Error] Call to a member function allow() on null
-Request URL: /cakeblog/
+#0 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): Router::redirect(Array)
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2024-07-11 18:12:43 Error: [ParseError] syntax error, unexpected token ";", expecting ")"
+Request URL: /cakeblog/posts/myposts
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2024-07-11 18:13:03 Error: [ArgumentCountError] Too few arguments to function Router::redirect(), 1 passed in C:\wamp64\www\cakeblog\View\Posts\myposts.ctp on line 2 and at least 2 expected
+Request URL: /cakeblog/posts/myposts
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): Router::redirect('/')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2024-07-11 18:13:28 Error: [ArgumentCountError] Too few arguments to function Router::redirect(), 1 passed in C:\wamp64\www\cakeblog\View\Posts\myposts.ctp on line 2 and at least 2 expected
+Request URL: /cakeblog/posts/myposts
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): Router::redirect('/')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2024-07-11 18:14:16 Error: [TypeError] rawurlencode(): Argument #1 ($string) must be of type string, CakeRoute given
+Request URL: /cakeblog/posts/myposts
+Stack Trace:
+#0 [internal function]: rawurlencode(Object(CakeRoute))
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Route\CakeRoute.php(501): array_map('rawurlencode', Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Route\CakeRoute.php(479): CakeRoute->_writeUrl(Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Router.php(911): CakeRoute->match(Array)
+#4 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper.php(298): Router::url(Array, false)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\HtmlHelper.php(360): Helper->url(Array)
+#6 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): HtmlHelper->link('Home Public Pag...', Array)
+#7 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#8 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#9 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#10 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#11 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#12 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2024-07-11 18:21:23 Error: [ArgumentCountError] Too few arguments to function Router::redirect(), 1 passed in C:\wamp64\www\cakeblog\View\Posts\myposts.ctp on line 2 and at least 2 expected
+Request URL: /cakeblog/posts/myposts
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): Router::redirect('/')
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2024-07-11 18:21:40 Error: [Error] Call to undefined method View::redirect()
+Request URL: /cakeblog/posts/myposts
 Stack Trace:
 #0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include()
 #1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
@@ -626,249 +357,398 @@ Stack Trace:
 #5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #6 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
-2024-07-11 13:43:12 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout
+2024-07-11 18:26:23 Error: [TypeError] rawurlencode(): Argument #1 ($string) must be of type string, CakeRoute given
+Request URL: /cakeblog/posts/myposts
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 13:46:28 Error: [MissingActionException] Action PostsController::login() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'login',
-)
-Request URL: /cakeblog/posts/login
+#0 [internal function]: rawurlencode(Object(CakeRoute))
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Route\CakeRoute.php(501): array_map('rawurlencode', Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Route\CakeRoute.php(479): CakeRoute->_writeUrl(Array)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Router.php(911): CakeRoute->match(Array)
+#4 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper.php(298): Router::url(Array, false)
+#5 C:\wamp64\www\cake2-php8\lib\Cake\View\Helper\HtmlHelper.php(362): Helper->url(Array)
+#6 C:\wamp64\www\cakeblog\View\Posts\myposts.ctp(2): HtmlHelper->link(Array)
+#7 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
+#8 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#9 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#10 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#11 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#12 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2024-07-11 18:27:46 Error: [ParseError] Unmatched ')'
+Request URL: /cakeblog/posts/myposts
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 13:46:42 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout
+#0 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
+#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2024-07-11 18:27:58 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
 Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 13:51:34 Error: [MissingHelperException] Helper class usersHelper could not be found.
-Exception Attributes: array (
-  'class' => 'usersHelper',
-  'plugin' => '',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('users')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('users')
-#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('users')
-#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#10 {main}
-2024-07-11 13:53:49 Error: [MissingHelperException] Helper class AuthHelper could not be found.
-Exception Attributes: array (
-  'class' => 'AuthHelper',
-  'plugin' => '',
-)
-Request URL: /cakeblog/
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
-#1 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
-#2 C:\wamp64\www\cakeblog\View\Posts\index.ctp(3): View->__get('Auth')
-#3 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\c...')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\c...', Array)
-#5 C:\wamp64\www\cake2-php8\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\c...')
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(973): View->render(NULL, NULL)
-#7 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#8 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#9 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#10 {main}
-2024-07-11 13:58:13 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 13:59:44 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 13:59:54 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout/display:users
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 14:00:25 Error: [MissingActionException] Action PostsController::logout() could not be found.
-Exception Attributes: array (
-  'controller' => 'PostsController',
-  'action' => 'logout',
-)
-Request URL: /cakeblog/posts/logout/display:users
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 14:12:04 Error: [MissingActionException] Action UsersController::isOwnedBy() could not be found.
-Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'isOwnedBy',
-)
-Request URL: /cakeblog/users/isOwnedBy
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 14:14:35 Error: [MissingActionException] Action UsersController::isOwnedBy() could not be found.
-Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'isOwnedBy',
-)
-Request URL: /cakeblog/users/isOwnedBy
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2024-07-11 14:15:10 Error: [NotFoundException] Invalid user
-Request URL: /cakeblog/users/view
-Stack Trace:
-#0 [internal function]: UsersController->view()
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
 #2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
 #4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2024-07-11 14:18:24 Error: [MissingControllerException] Controller class PostController could not be found.
+2024-07-11 18:28:07 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
+Stack Trace:
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 18:28:10 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
+Stack Trace:
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 18:28:28 Error: [NotFoundException] Invalid post
+Request URL: /cakeblog/posts/view
+Stack Trace:
+#0 [internal function]: PostsController->view()
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(504): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2024-07-11 18:31:54 Error: [MissingActionException] Action UsersController::myposts() could not be found.
 Exception Attributes: array (
-  'class' => 'PostController',
+  'controller' => 'UsersController',
+  'action' => 'myposts',
+)
+Request URL: /cakeblog/users/myposts
+Stack Trace:
+#0 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2024-07-11 20:32:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/post/add
+Request URL: /cakeblog/css/jquery.min.css
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 14:18:35 Error: [MissingControllerException] Controller class CakeblogController could not be found.
+2024-07-11 20:32:40 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
-  'class' => 'CakeblogController',
+  'class' => 'JsController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/cakeblog/
+Request URL: /cakeblog/js/jquery.min.js
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 14:18:36 Error: [MissingControllerException] Controller class CakeblogController could not be found.
+n}
+2024-07-11 20:32:40 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
-  'class' => 'CakeblogController',
+  'class' => 'CssController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/cakeblog/
+Request URL: /cakeblog/css/bootstrap.min.css
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 14:19:23 Error: [MissingControllerException] Controller class CakeblogController could not be found.
+2024-07-11 20:32:52 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
-  'class' => 'CakeblogController',
+  'class' => 'CssController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/cakeblog/
+Request URL: /cakeblog/css/jquery.min.css
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 14:21:21 Error: [CakeException] Authorization adapter "action" was not found.
-Request URL: /cakeblog/posts/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(467): AuthComponent->constructAuthorize()
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(311): AuthComponent->isAuthorized(Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): AuthComponent->startup(Object(PostsController))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('startup')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(688): CakeEventManager->dispatch(Object(CakeEvent))
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-11 14:21:58 Error: [CakeException] Authorization adapter "action" was not found.
-Request URL: /cakeblog/posts/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(467): AuthComponent->constructAuthorize()
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(311): AuthComponent->isAuthorized(Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): AuthComponent->startup(Object(PostsController))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('startup')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(688): CakeEventManager->dispatch(Object(CakeEvent))
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-11 14:22:30 Error: [MissingControllerException] Controller class CakeblogController could not be found.
+2024-07-11 20:32:52 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
-  'class' => 'CakeblogController',
+  'class' => 'JsController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/cakeblog/
+Request URL: /cakeblog/js/jquery.min.js
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2024-07-11 14:23:10 Error: [CakeException] Authorization adapter "users" was not found.
-Request URL: /cakeblog/posts/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(467): AuthComponent->constructAuthorize()
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(311): AuthComponent->isAuthorized(Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): AuthComponent->startup(Object(PostsController))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('startup')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(688): CakeEventManager->dispatch(Object(CakeEvent))
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-11 14:24:08 Error: [CakeException] Authorization adapter "Users" was not found.
-Request URL: /cakeblog/posts/add
-Stack Trace:
-#0 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(467): AuthComponent->constructAuthorize()
-#1 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Component\AuthComponent.php(311): AuthComponent->isAuthorized(Array)
-#2 C:\wamp64\www\cake2-php8\lib\Cake\Utility\ObjectCollection.php(129): AuthComponent->startup(Object(PostsController))
-#3 C:\wamp64\www\cake2-php8\lib\Cake\Event\CakeEventManager.php(244): ObjectCollection->trigger('startup')
-#4 C:\wamp64\www\cake2-php8\lib\Cake\Controller\Controller.php(688): CakeEventManager->dispatch(Object(CakeEvent))
-#5 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
-#6 C:\wamp64\www\cake2-php8\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#7 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2024-07-11 14:24:20 Error: [MissingControllerException] Controller class CakeblogController could not be found.
+2024-07-11 20:32:52 Error: [MissingControllerException] Controller class CssController could not be found.
 Exception Attributes: array (
-  'class' => 'CakeblogController',
+  'class' => 'CssController',
   'plugin' => NULL,
 )
-Request URL: /cakeblog/cakeblog/
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:32:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/bootstrap.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:32:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:32:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/jquery.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:32:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/bootstrap.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+
+2024-07-11 20:33:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+in}
+2024-07-11 20:33:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/bootstrap.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/bootstrap.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/jquery.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:33:09 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:36:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/jquery.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:36:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+n}
+2024-07-11 20:36:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:56:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:56:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:56:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:56:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:57:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:57:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/jquery.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:57:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+n}
+2024-07-11 20:57:49 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:58:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:58:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/js/jquery.min.js
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:58:27 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/jquery.min.css
+Stack Trace:
+#0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2024-07-11 20:58:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cakeblog/css/bootstrap.min.css
 Stack Trace:
 #0 C:\wamp64\www\cakeblog\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}

@@ -32,11 +32,12 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller
 {
+    public $theme = 'BS5';
+
     public $helpers = [
         'Html',
         'Form' => ['className' => 'Formx'],
     ];
-
     public $components = array(
         'DebugKit.Toolbar',
         'Flash',
@@ -54,13 +55,15 @@ class AppController extends Controller
                     'passwordHasher' => 'Blowfish'
                 )
             ),
-            'authorize' => array('Controller')
+            'authorize' => [
+                'Controller',
+            ]
         )
     );
 
     public function beforeFilter()
     {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view', 'myposts', 'add');
     }
 
     public function isAuthorized($user)
@@ -69,6 +72,6 @@ class AppController extends Controller
             return true;
         }
 
-        return false;
+        return $this->redirect($this->referer());
     }
 }
