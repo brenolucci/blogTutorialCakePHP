@@ -1,37 +1,43 @@
-<h1>Blog Users</h1>
-<p><?php echo $this->Html->link('Add User', array('action' => 'add')); ?></p>
+<h1>Blog posts</h1>
+<p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
 <table>
     <tr>
         <th>Id</th>
-        <th>Username</th>
-        <th>Role</th>
-        <th>Created</th>
+        <th>Title</th>
         <th>Actions</th>
+        <th>Created</th>
     </tr>
 
-    <!-- Here's where we loop through our $users array, printing out User info -->
+    <!-- Here's where we loop through our $posts array, printing out post info -->
 
-    <?php foreach ($users as $user): ?>
+    <?php foreach ($posts as $post): ?>
         <tr>
-            <td><?php echo $user['User']['id']; ?></td>
-            <td><?php echo $user['User']['username']; ?></td>
-            <td><?php echo $user['User']['role']; ?></td>
-            <td><?php echo $user['User']['created']; ?></td>
-            <td><?php echo $user['User']['created']; ?></td>
+            <td><?php echo $post['Post']['id']; ?></td>
+            <td>
+                <?php
+                echo $this->Html->link(
+                    $post['Post']['title'],
+                    array('action' => 'view', $post['Post']['id'])
+                );
+                ?>
+            </td>
             <td>
                 <?php
                 echo $this->Html->link(
                     'Edit',
-                    array('action' => 'edit', $user['User']['id'])
+                    array('action' => 'edit', $post['Post']['id'])
                 );
                 ?>
                 <?php
                 echo $this->Form->postLink(
                     'Delete',
-                    array('action' => 'delete', $user['User']['id']),
+                    array('action' => 'delete', $post['Post']['id']),
                     array('confirm' => 'Are you sure?')
                 );
                 ?>
+            </td>
+            <td>
+                <?php echo $post['Post']['created']; ?>
             </td>
         </tr>
     <?php endforeach; ?>

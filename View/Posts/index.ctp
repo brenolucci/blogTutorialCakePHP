@@ -1,5 +1,8 @@
 <h1>Blog posts</h1>
 <p><?php echo $this->Html->link('Add Post', array('action' => 'add')); ?></p>
+<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
+
+
 <table>
     <tr>
         <th>Id</th>

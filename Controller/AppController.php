@@ -46,20 +46,29 @@ class AppController extends Controller
                 'action' => 'index'
             ),
             'logoutRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
-                'home'
+                'controller' => 'users',
+                'action' => 'login'
             ),
             'authenticate' => array(
                 'Form' => array(
                     'passwordHasher' => 'Blowfish'
                 )
-            )
+            ),
+            'authorize' => array('Controller')
         )
     );
 
     public function beforeFilter()
     {
         $this->Auth->allow('index', 'view');
+    }
+
+    public function isAuthorized($user)
+    {
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        return false;
     }
 }
