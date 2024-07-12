@@ -1,5 +1,4 @@
 <?php
-
 class Marca extends AppModel
 {
     public $primaryKey = 'id';
@@ -10,12 +9,12 @@ class Marca extends AppModel
         'nome' => array(
             'rule' => 'notBlank'
         ),
-        'logo_url' => array(
+        'versao_id' => array(
             'rule' => 'notBlank'
         )
     );
 
-    public function totalMarcas()
+    public function totalModelo()
     {
         return $this->find('count');
     }
