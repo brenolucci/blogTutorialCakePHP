@@ -18,4 +18,9 @@ class Post extends AppModel
     {
         return $this->field('id', array('id' => $post, 'user_id' => $user)) !== false;
     }
+
+    public function totalPosts()
+    {
+        return $this->find('count');
+    }
 }

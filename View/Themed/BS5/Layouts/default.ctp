@@ -1,47 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <?= $this->Html->charset(); ?>
+    <?= $this->Html->charset() ?>
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title'); ?>
     </title>
-    <?php
-    echo $this->Html->meta('icon');
-
-    echo $this->Html->css([
-        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
-    ]);
-    echo $this->Html->script([
-        'jquery.min',
-        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
-    ]);
-
-    echo $this->fetch('meta');
-    echo $this->fetch('css');
-    echo $this->fetch('script');
-    ?>
+    <?= $this->Html->css([
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback',
+        '/plugins/fontawesome-free/css/all.min',
+        'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
+        '/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min',
+        '/plugins/icheck-bootstrap/icheck-bootstrap.min',
+        '/plugins/jqvmap/jqvmap.min',
+        'adminlte.min',
+        '/plugins/overlayScrollbars/css/OverlayScrollbars.min',
+        '/plugins/daterangepicker/daterangepicker',
+        '/plugins/summernote/summernote-bs4.min'
+    ]) ?>
 </head>
 
-<body>
-    <div id="container">
-        <div id="header">
-        </div>
-        <div id="content">
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
 
-            <?= $this->Flash->render(); ?>
+        <?php
+        echo $this->element('Layout/preloader');
+        echo $this->element('Layout/topnav');
+        echo $this->element('Layout/menulateral');
 
-            <?= $this->fetch('content'); ?>
-        </div>
-        <div id="footer">
-            <?= $this->Html->link(
-                $this->Html->image('cake.power.gif', array('alt' => 'CakeLogo', 'border' => '0')),
-                'https://cakephp.org/',
-                ['target' => '_blank', 'escape' => false, 'id' => 'cake-powered']
-            ) ?>
-        </div>
+        echo $this->fetch('content');
+        echo $this->element('Layout/rodape');
+        ?>
     </div>
-</body>
 
-</html>
+    <?= $this->Html->script([
+        '/plugins/jquery/jquery.min',
+        '/plugins/jquery-ui/jquery-ui.min',
+    ]);
+    ?>
+
+    <?=
+        $this->Html->script([
+            '/plugins/bootstrap/js/bootstrap.bundle.min',
+            '/plugins/chart.js/Chart.min',
+            '/plugins/sparklines/sparkline',
+            '/plugins/jqvmap/jquery.vmap.min',
+            '/plugins/jqvmap/maps/jquery.vmap.usa',
+            '/plugins/jquery-knob/jquery.knob.min',
+            '/plugins/moment/moment.min',
+            '/plugins/daterangepicker/daterangepicker',
+            '/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min',
+            '/plugins/summernote/summernote-bs4.min',
+            '/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min',
+            'adminlte',
+            'demo',
+            'pages/dashboard'
+        ]);
+    ?>
+</body>

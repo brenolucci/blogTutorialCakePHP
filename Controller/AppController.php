@@ -41,37 +41,38 @@ class AppController extends Controller
     public $components = array(
         'DebugKit.Toolbar',
         'Flash',
-        'Auth' => array(
-            'loginRedirect' => array(
-                'controller' => 'posts',
-                'action' => 'index'
-            ),
-            'logoutRedirect' => array(
-                'controller' => 'users',
-                'action' => 'login'
-            ),
-            'authenticate' => array(
-                'Form' => array(
-                    'passwordHasher' => 'Blowfish'
-                )
-            ),
-            'authorize' => [
-                'Controller',
-            ]
-        )
+        // 'Auth' => array(
+        //     'loginRedirect' => array(
+        //         'controller' => 'posts',
+        //         'action' => 'index'
+        //     ),
+        //     'logoutRedirect' => array(
+        //         'controller' => 'users',
+        //         'action' => 'login'
+        //     ),
+        //     'authenticate' => array(
+        //         'Form' => array(
+        //             'passwordHasher' => 'Blowfish'
+        //         )
+        //     ),
+        //     // 'authorize' => [
+        //     //     'Controller',
+        //     // ]
+        // ),
+
     );
 
-    public function beforeFilter()
-    {
-        $this->Auth->allow('index', 'view', 'myposts', 'add');
-    }
+    // public function beforeFilter()
+    // {
+    //     $this->Auth->allow('index', 'view', 'myposts', 'add', 'display');
+    // }
 
-    public function isAuthorized($user)
-    {
-        if (isset($user['role']) && $user['role'] === 'admin') {
-            return true;
-        }
+    // public function isAuthorized($user)
+    // {
+    //     if (isset($user['role']) && $user['role'] === 'admin') {
+    //         return true;
+    //     }
 
-        return $this->redirect($this->referer());
-    }
+    //     return $this->redirect($this->referer());
+    // }
 }

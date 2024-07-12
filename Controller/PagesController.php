@@ -70,6 +70,9 @@ class PagesController extends AppController
         }
         $this->set(compact('page', 'subpage', 'title_for_layout'));
 
+        $this->loadModel('Marca');
+        $this->set('totalMarcas', $this->Marca->totalMarcas());
+
         try {
             $this->render(implode('/', $path));
         } catch (MissingViewException $e) {

@@ -73,7 +73,7 @@ class DATABASE_CONFIG
         'host' => 'localhost',
         'login' => 'root',
         'password' => '',
-        'database' => 'cakeblog_db',
+        'database' => 'revendacarros_db',
         'prefix' => '',
         //'encoding' => 'utf8',
     );
