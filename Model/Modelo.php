@@ -1,20 +1,59 @@
 <?php
-class Marca extends AppModel
+class Modelo extends AppModel
 {
+    public $name = 'Modelo';
     public $primaryKey = 'id';
 
     public $displayField = 'nome';
 
-    public $validate = array(
-        'nome' => array(
-            'rule' => 'notBlank'
-        ),
-        'versao_id' => array(
-            'rule' => 'notBlank'
-        )
-    );
+    public $belongsTo = [
+        'Marca' => [
+            'className' => 'Marca',
+            'foreignKey' => 'marca_id',
+            'type' => 'LEFT',
+            'fields' => [],
+            'conditions' => []
+        ]
+    ];
 
-    public function totalModelo()
+    public $hasMany = [
+        'Versoes' => [
+            'className' => 'Versao',
+            'foreignKey' => 'modelo_id',
+            'type' => 'LEFT',
+            'fields' => [],
+            'conditions' => []
+        ]
+    ];
+
+    public $validate = [
+        'nome' => [
+            'notBlank' => [
+                'rule' => 'notBlank',
+                'message' => __('Nome: preenchimento obrigatório!'),
+            ],
+            'maxlength' => [
+                'rule' => ['maxlength', 100],
+                'message' => __('Nome: deve conter no máximo %d caracteres!'),
+            ],
+            'isUnique' => [
+                'rule' => 'isUnique',
+                'message' => 'Nome: modelo já registrado!'
+            ],
+        ],
+    ];
+
+    public function beforeValidate($options = [])
+    {
+        if (!empty($this->request->data[$this->alias]['nome'])) {
+            $this->request->data[$this->alias]['nome'] = trim($this->request->data[$this->alias]['nome']);
+        }
+
+        return parent::beforeValidate($options);
+    }
+
+
+    public function totalModelos()
     {
         return $this->find('count');
     }
