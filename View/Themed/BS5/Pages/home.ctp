@@ -142,7 +142,6 @@
                 </table>
             </div>
 
-
             <div class="row">
 
                 <section class="col-lg-7 connectedSortable">

@@ -27,11 +27,11 @@ class Marca extends AppModel
         'nome' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Nome: preenchimento obrigatório!'),
+                'message' => 'Nome: preenchimento obrigatório!',
             ],
             'maxlength' => [
                 'rule' => ['maxlength', 100],
-                'message' => __('Nome: deve conter no máximo %d caracteres!'),
+                'message' => 'Nome: deve conter no máximo %d caracteres!',
             ],
             'isUnique' => [
                 'rule' => 'isUnique',
