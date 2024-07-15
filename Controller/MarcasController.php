@@ -14,7 +14,4 @@ class MarcasController extends AppController
         }
         $this->set('marca', $marca);
     }
-
-
-
 }
