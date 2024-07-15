@@ -26,6 +26,5 @@ class MarcasController extends AppController
             $this->Flash->success(__('Your marca has been saved.'));
             return $this->redirect(['action' => 'index']);
         }
-
     }
 }
