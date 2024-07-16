@@ -2,23 +2,21 @@
     <div class="card-header">
         <h3 class="card-title">Marca</h3>
     </div>
-    <?= $this->Form->create('Marca') ?>
+    <?= $this->Form->create('Marca', ['type' => 'file']) ?>
     <div class="card-body">
         <div class="form-group">
             <?= $this->Form->input('nome', [
-                'label' => "Nome da marca",
-                'class' => "form-control",
-                'name' => "nome",
-                'placeholder' => "Digite o nome da marca",
+                'label' => __('Nome da marca'),
+                'placeholder' => __('Digite o nome da marca'),
+                'class' => 'form-control',
             ]) ?>
         </div>
         <div class="form-group">
-            <?= $this->Form->input('nome-do-campo', [
+            <?= $this->Form->input('files', [
                 'label' => [
                     'text' => __('Logomarca'),
                     'class' => 'w-100'
                 ],
-                'name' => "nomeDoCampo",
                 'type' => 'file',
                 'multiple' => true,
             ]) ?>
