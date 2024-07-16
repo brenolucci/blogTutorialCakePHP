@@ -64,7 +64,8 @@ if (!defined('CONFIG')) {
  * The following line differs from its sibling
  * /lib/Cake/Console/Templates/skel/webroot/index.php
  */
-define('CAKE_CORE_INCLUDE_PATH', 'C:' . DS . 'wamp64' . DS . 'www' . DS . 'cake2-php8' . DS . 'lib');
+define('CAKE_CORE_INCLUDE_PATH', DS . 'Applications' . DS . 'XAMPP' . DS . 'htdocs' . DS . 'cake2-php8' . DS . 'lib');
+// define('CAKE_CORE_INCLUDE_PATH', 'C:' . DS . 'wamp64' . DS . 'www' . DS . 'cake2-php8' . DS . 'lib');
 
 /**
  * This auto-detects CakePHP as a composer installed library.
