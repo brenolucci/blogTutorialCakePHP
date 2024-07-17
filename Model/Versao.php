@@ -142,9 +142,6 @@ class Versao extends AppModel
             $this->request->data[$this->alias]['modelo_id'] = trim($this->request->data[$this->alias]['modelo_id']);
         }
 
-        if (!empty($this->request->data[$this->alias]['combustivel_id'])) {
-            $this->request->data[$this->alias]['combustivel_id'] = trim($this->request->data[$this->alias]['combustivel_id']);
-        }
 
         if (!empty($this->request->data[$this->alias]['ano'])) {
             $this->request->data[$this->alias]['ano'] = trim($this->request->data[$this->alias]['ano']);

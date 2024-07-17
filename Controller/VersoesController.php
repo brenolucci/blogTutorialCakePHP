@@ -6,6 +6,7 @@ class VersoesController extends AppController
     {
         $this->set('versoes', $this->Versao->find('all'));
     }
+
     public function view($id = null)
     {
         if (!$id) {
