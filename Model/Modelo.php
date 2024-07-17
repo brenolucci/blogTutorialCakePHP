@@ -17,7 +17,7 @@ class Modelo extends AppModel
     ];
 
     public $hasMany = [
-        'Versoes' => [
+        'Versao' => [
             'className' => 'Versao',
             'foreignKey' => 'modelo_id',
             'type' => 'LEFT',

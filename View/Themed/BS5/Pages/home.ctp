@@ -83,8 +83,6 @@
                 </div>
 
             </div>
-            <?= $this->element('forms/marcaForm') ?>
-            <?= $this->element('forms/modeloForm') ?>
             <?= $this->element('forms/versaoForm') ?>
 
             <div class="card-body">

@@ -4,30 +4,23 @@
     </div>
 
 
-    <form>
-        <div class="card-body">
+    <?= $this->Form->create('Modelo') ?>
+    <div class="card-body">
+        <div class="form-group">
             <div class="form-group">
-                <label for="exampleInputEmail1">Nome do Modelo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
+                <?= $this->Form->input('nome', [
+                    'label' => __('Nome do modelo'),
+                    'placeholder' => __('Digite o nome do modelo'),
+                    'class' => 'form-control',
+                ]) ?>
             </div>
-            <div class="form-group">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Marca Vinculada
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <div class="form-group">
+            <?= $this->Form->select('marca_id', $marcas); ?></>
         </div>
-    </form>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+    <?= $this->Form->end() ?>
 </div>

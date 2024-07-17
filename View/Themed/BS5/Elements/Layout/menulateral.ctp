@@ -45,22 +45,23 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a claas="nav=link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <?=
-                                    $this->Html->link(
-                                        'Marcas',
-                                        ['controller' => 'marcas', 'action' => 'index']
-                                    );
-                                ?>
-                            </a>
+                        <li class="nav-item mx-2">
+                            <?=
+                                $this->Html->link(
+                                    'Marcas',
+                                    ['controller' => 'marcas', 'action' => 'index'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Modelos</p>
-                            </a>
+                        <li class="nav-item mx-2">
+                            <?=
+                                $this->Html->link(
+                                    'Modelos',
+                                    ['controller' => 'modelos', 'action' => 'index'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
@@ -94,22 +95,26 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <?=
-                                    $this->Html->link(
-                                        'Marcas',
-                                        ['controller' => 'marcas', 'action' => 'add']
-                                    );
-                                ?>
-                            </a>
+                        <li class="nav-item mx-2">
+                            <?=
+                                $this->Html->link(
+                                    'Marcas',
+                                    ['controller' => 'marcas', 'action' => 'add'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
+
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Modelo</p>
-                            </a>
+                        <li class="nav-item mx-2">
+
+                            <?=
+                                $this->Html->link(
+                                    'Modelos',
+                                    ['controller' => 'modelos', 'action' => 'add'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
+
                         </li>
                         <li class="nav-item">
                             <a href="pages/forms/editors.html" class="nav-link">

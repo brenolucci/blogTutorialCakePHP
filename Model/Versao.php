@@ -3,6 +3,7 @@
 class Versao extends AppModel
 {
     public $name = 'Versao';
+    public $useTable = 'versoes';
     public $primaryKey = 'id';
 
     public $displayField = 'nome';
@@ -47,83 +48,83 @@ class Versao extends AppModel
         'nome' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Nome: preenchimento obrigatório!'),
+                'message' => 'Nome: preenchimento obrigatório!',
             ],
             'maxlength' => [
                 'rule' => ['maxlength', 100],
-                'message' => __('Nome: deve conter no máximo %d caracteres!'),
+                'message' => 'Nome: deve conter no máximo %d caracteres!',
             ],
         ],
         'modelo_id' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Modelo: preenchimento obrigatório!'),
+                'message' => 'Modelo: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Modelo: apenas números inteiros positivos!')
+                'message' => 'Modelo: apenas números inteiros positivos!'
             ],
         ],
         'combustivel_id' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Combustível: preenchimento obrigatório!'),
+                'message' => 'Combustível: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Combustível: apenas números inteiros positivos!')
+                'message' => 'Combustível: apenas números inteiros positivos!'
             ],
         ],
         'ano' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Ano: preenchimento obrigatório!'),
+                'message' => 'Ano: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Ano: apenas números inteiros positivos!')
+                'message' => 'Ano: apenas números inteiros positivos!'
             ],
             'maxlength' => [
                 'rule' => ['maxlength', 4],
-                'message' => __('Ano: deve conter no máximo %d caracteres!'),
+                'message' => 'Ano: deve conter no máximo %d caracteres!',
             ],
         ],
         'ano_modelo' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Ano: preenchimento obrigatório!'),
+                'message' => 'Ano: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Ano: apenas números inteiros positivos!')
+                'message' => 'Ano: apenas números inteiros positivos!'
             ],
             'maxlength' => [
                 'rule' => ['maxlength', 4],
-                'message' => __('Ano: deve conter no máximo %d caracteres!'),
+                'message' => 'Ano: deve conter no máximo %d caracteres!',
             ],
         ],
         'preco' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Preço: preenchimento obrigatório!'),
+                'message' => 'Preço: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Preço: apenas números inteiros positivos!')
+                'message' => 'Preço: apenas números inteiros positivos!'
             ],
             'money' => [
                 'rule' => ['money', 'left'],
-                'message' => __('Preço: deve conter um valor monetário válido!'),
+                'message' => 'Preço: deve conter um valor monetário válido!',
             ],
         ],
         'quilometragem' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Quilometragem: preenchimento obrigatório!'),
+                'message' => 'Quilometragem: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Quilometragem: apenas números inteiros positivos!')
+                'message' => 'Quilometragem: apenas números inteiros positivos!'
             ],
         ],
         'localizacao' => [
