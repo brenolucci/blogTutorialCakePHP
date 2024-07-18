@@ -10,9 +10,9 @@ class Modelo extends AppModel
         'Marca' => [
             'className' => 'Marca',
             'foreignKey' => 'marca_id',
-            'type' => 'LEFT',
+            'type' => 'INNER',
             'fields' => [],
-            'conditions' => []
+            'conditions' => [],
         ]
     ];
 
@@ -22,7 +22,8 @@ class Modelo extends AppModel
             'foreignKey' => 'modelo_id',
             'type' => 'LEFT',
             'fields' => [],
-            'conditions' => []
+            'conditions' => [],
+            'dependent' => true,
         ]
     ];
 

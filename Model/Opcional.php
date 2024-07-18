@@ -3,6 +3,9 @@
 class Opcional extends AppModel
 {
     public $name = 'Opcional';
+
+    public $useTable = 'opcionais';
+
     public $primaryKey = 'id';
 
     public $displayField = 'nome';

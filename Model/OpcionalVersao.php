@@ -3,6 +3,9 @@
 class OpcionalVersao extends AppModel
 {
     public $name = 'OpcionalVersao';
+
+    public $useTable = 'opcionais_versoes';
+
     public $primaryKey = 'id';
 
     public $belongsTo = [
@@ -26,21 +29,21 @@ class OpcionalVersao extends AppModel
         'versao_id' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Versão: preenchimento obrigatório!'),
+                'message' => 'Versão: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Versão: apenas números inteiros positivos!')
+                'message' => 'Versão: apenas números inteiros positivos!'
             ],
         ],
         'opcional_id' => [
             'notBlank' => [
                 'rule' => 'notBlank',
-                'message' => __('Opcional: preenchimento obrigatório!'),
+                'message' => 'Opcional: preenchimento obrigatório!',
             ],
             'naturalNumber' => [
                 'rule' => 'naturalNumber',
-                'message' => __('Opcional: apenas números inteiros positivos!')
+                'message' => 'Opcional: apenas números inteiros positivos!'
             ],
         ],
     ];

@@ -4,6 +4,8 @@ class Imagem extends AppModel
 {
     public $name = 'Imagem';
 
+    public $useTable = 'imagens';
+
     public $primaryKey = 'id';
 
     public $displayField = 'nome';

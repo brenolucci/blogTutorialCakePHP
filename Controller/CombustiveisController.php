@@ -2,6 +2,8 @@
 
 class CombustiveisController extends AppController
 {
+    public $uses = ['Combustivel'];
+
     public function view($id = null)
     {
         if (!$id) {

@@ -4,7 +4,6 @@ class ModelosController extends AppController
 {
     public function index()
     {
-        $this->Modelo->Behaviors->load('Containable');
         $this->set('modelos', $this->Modelo->find('all', [
             'contain' => 'Marca.nome'
         ]));

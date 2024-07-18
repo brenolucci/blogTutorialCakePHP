@@ -8,18 +8,19 @@ class Versao extends AppModel
 
     public $displayField = 'nome';
 
+
     public $belongsTo = [
         'Modelo' => [
             'className' => 'Modelo',
             'foreignKey' => 'modelo_id',
-            'type' => 'LEFT',
+            'type' => 'INNER',
             'fields' => [],
             'conditions' => [],
         ],
         'Combustivel' => [
             'className' => 'Combustivel',
             'foreignKey' => 'combustivel_id',
-            'type' => 'LEFT',
+            'type' => 'INNER',
             'fields' => [],
             'conditions' => [],
         ],
@@ -142,6 +143,9 @@ class Versao extends AppModel
             $this->request->data[$this->alias]['modelo_id'] = trim($this->request->data[$this->alias]['modelo_id']);
         }
 
+        if (!empty($this->request->data[$this->alias]['combustivel_id'])) {
+            $this->request->data[$this->alias]['combustivel_id'] = trim($this->request->data[$this->alias]['combustivel_id']);
+        }
 
         if (!empty($this->request->data[$this->alias]['ano'])) {
             $this->request->data[$this->alias]['ano'] = trim($this->request->data[$this->alias]['ano']);
@@ -169,5 +173,16 @@ class Versao extends AppModel
     public function totalVersoes()
     {
         return $this->find('count');
+    }
+
+    public function bindModelMarca()
+    {
+        $this->belongsTo['Marca'] = [
+            'className' => 'Marca',
+            'foreignKey' => false,
+            'type' => 'INNER',
+            'fields' => [],
+            'conditions' => 'Modelo.marca_id = Marca.id',
+        ];
     }
 }
