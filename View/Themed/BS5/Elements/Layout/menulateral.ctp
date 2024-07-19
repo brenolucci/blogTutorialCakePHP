@@ -63,11 +63,14 @@
                                 );
                             ?>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Versões</p>
-                            </a>
+                        <li class="nav-item mx-2">
+                            <?=
+                                $this->Html->link(
+                                    'Versões',
+                                    ['controller' => 'versoes', 'action' => 'index'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
@@ -106,7 +109,6 @@
 
                         </li>
                         <li class="nav-item mx-2">
-
                             <?=
                                 $this->Html->link(
                                     'Modelos',
@@ -114,13 +116,15 @@
                                     ['class' => 'nav-link']
                                 );
                             ?>
-
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/editors.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Versão</p>
-                            </a>
+                        <li class="nav-item mx-2">
+                            <?=
+                                $this->Html->link(
+                                    'Versões',
+                                    ['controller' => 'versoes', 'action' => 'add'],
+                                    ['class' => 'nav-link']
+                                );
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a href="pages/forms/validation.html" class="nav-link">

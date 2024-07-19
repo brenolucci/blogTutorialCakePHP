@@ -1,6 +1,6 @@
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title">Marca</h3>
+        <h3 class="card-title">Cadastro de Marca</h3>
     </div>
     <?= $this->Form->create('Marca', ['type' => 'file']) ?>
     <div class="card-body">

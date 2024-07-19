@@ -25,9 +25,8 @@ class ModelosController extends AppController
     public function add()
     {
         $this->loadModel('Marca');
-        $this->Modelo->Behaviors->load('Containable');
         $this->set('marcas', $this->Marca->find('list', [
-            'contain' => 'Marca.nome, Marca.id'
+            'fields' => 'Marca.id, Marca.nome'
         ]));
         if ($this->request->is('post')):
             if ($this->Modelo->save($this->request->data)) {

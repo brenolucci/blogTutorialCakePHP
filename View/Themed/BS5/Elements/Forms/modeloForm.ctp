@@ -1,8 +1,7 @@
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title">Cadastro de Marca</h3>
+        <h3 class="card-title">Cadastro de Modelo</h3>
     </div>
-
 
     <?= $this->Form->create('Modelo') ?>
     <div class="card-body">

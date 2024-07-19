@@ -3,73 +3,89 @@
         <h3 class="card-title">Cadastro de Versão</h3>
     </div>
 
+    <?= $this->Form->create('Versoes', ['type' => 'file']) ?>
 
-    <form>
-        <div class="card-body">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Nome da Versao</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-12 form-group">
+                <?= $this->Form->input('nome', [
+                    'label' => __('Nome da versão'),
+                    'placeholder' => __('Digite o nome da versão'),
+                    'class' => 'form-control',
+                ]) ?>
             </div>
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Ano</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
-                <label for="exampleInputEmail1">Ano Modelo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
-                <label for="exampleInputEmail1">Quilometragem</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
-                <label for="exampleInputEmail1">Preço</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
-                <label for="exampleInputEmail1">Localização</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite o nome do modelo">
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 form-group">
+                <?= $this->Form->input('ano', [
+                    'label' => __('Ano'),
+                    'placeholder' => __('Digite o ano de fabricação'),
+                    'class' => 'form-control',
+                ]) ?>
             </div>
-
-            <div class="form-group">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Modelo
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
+            <div class="col-12 col-md-6 form-group">
+                <?= $this->Form->input('ano_modelo', [
+                    'label' => __('Ano Modelo'),
+                    'placeholder' => __('Digite o ano do modelo'),
+                    'class' => 'form-control',
+                ]) ?>
             </div>
-
-
-            <div class="form-group">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Combustível
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="exampleInputFile">Fotos</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Escolha os arquivos</label>
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <div class="row">
+            <div class="col-12 col-md-6 form-group">
+                <?= $this->Form->input('quilometragem', [
+                    'label' => __('Quilometragem'),
+                    'placeholder' => __('Digite a quilometragem'),
+                    'class' => 'form-control',
+                ]) ?>
+            </div>
+            <div class="col-12 col-md-6 form-group">
+                <?= $this->Form->input('preco', [
+                    'label' => __('Preço'),
+                    'placeholder' => __('Digite o preço'),
+                    'class' => 'form-control',
+                ]) ?>
+            </div>
         </div>
-    </form>
+        <div class="row mt-3">
+            <div class="col-12 form-group">
+                <?= $this->Form->input('localizacao', [
+                    'label' => __('Localização'),
+                    'placeholder' => __('Digite a localização'),
+                    'class' => 'form-control',
+                ]) ?>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <?= $this->Form->input('modelo_id', [
+                'options' => $modelos,
+                'class' => 'px-2 ml-2'
+                ]); ?></>
+        </div>
+        <div class="form-group">
+            <?= $this->Form->input('combutsivel_id', [
+                'options' => $combustiveis,
+                'class' => 'px-2 ml-2'
+                ]); ?></>
+        </div>
+
+        <div class="form-group">
+            <?= $this->Form->input('files', ['type' => 'file', 'multiple'], [
+                'label' => [
+                    'text' => __('Foto'),
+                    'class' => 'w-100'
+                ],
+                'multiple' => true,
+            ]) ?>
+        </div>
+
+    </div>
+
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+    <?= $this->Form->end() ?>
 </div>
